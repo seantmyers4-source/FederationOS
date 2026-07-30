@@ -1,0 +1,19 @@
+name: Governance change
+description: Propose a governed FederationOS repository change
+title: "[GOV] "
+body:
+  - type: input
+    id: authority
+    attributes: {label: Owning authority}
+    validations: {required: true}
+  - type: input
+    id: directive
+    attributes: {label: Directive or decision}
+    validations: {required: true}
+  - type: textarea
+    id: scope
+    attributes: {label: Scope and exclusions}
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes: {label: Public-safe evidence references}
