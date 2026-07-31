@@ -1,7 +1,7 @@
 # FREP-001 Independent QA Reproduction Guide
 
 **Record:** OSF-ENG-QARG-FREP-001-001  
-**Candidate implementation commit:** `18995eca88537e23fc7569eaabbe51e635204387`
+**Candidate implementation commit:** `042e898211ef6f0e8c897e36a70bca0d82d3fcbb`
 
 ## Supported runtime and tools
 
@@ -15,7 +15,7 @@
 ```bash
 git clone https://github.com/seantmyers4-source/FederationOS.git
 cd FederationOS
-git checkout 18995eca88537e23fc7569eaabbe51e635204387
+git checkout 042e898211ef6f0e8c897e36a70bca0d82d3fcbb
 python3.12 -m venv .venv
 . .venv/bin/activate
 python -m pip install --disable-pip-version-check -r engineering/requirements-validation.txt
