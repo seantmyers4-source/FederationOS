@@ -45,3 +45,7 @@ The content scanner covers repository files except Git internals, interpreter ca
 ## Regression preservation
 
 The original validator defect remains immutable at commit `f0a5b9e5b78dec14e252d59285f2c95788e1d9ea`, with workflow runs `30591017023` (failed) and `30591075868` (passed after the narrow correction). The new regression suite prevents recurrence and expands coverage beyond those defects.
+
+## Corrective workflow regression
+
+Run `30592862411` revealed that prohibited-pattern definitions self-triggered and that `tee` masked nonzero exit codes. The validator now excludes only its exact implementation path (including disposable-copy equivalents), while governed content remains scanned; the workflow invokes commands directly so failures propagate. Run `30592968662` verifies both corrections.
