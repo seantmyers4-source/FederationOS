@@ -1,1 +1,18 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Cross-OS Reference Manifest","type":"object","required":["record_id","source_os","source_artifact","source_authority","reference_type","canonical_copy"],"properties":{"record_id":{"type":"string"},"source_os":{"type":"string"},"source_artifact":{"type":"string"},"source_authority":{"type":"string"},"reference_type":{"enum":["reference","import","consumer-binding"]},"canonical_copy":{"const":false}},"additionalProperties":true}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.federationos.example/cross-os-reference.schema.json",
+  "title": "Cross-OS Reference Manifest",
+  "type": "object",
+  "required": ["record_id", "source_os", "source_artifact", "source_authority", "reference_type", "canonical_copy", "provenance_reference", "consumer_bindings"],
+  "properties": {
+    "record_id": {"type": "string", "minLength": 1},
+    "source_os": {"type": "string", "minLength": 1},
+    "source_artifact": {"type": "string", "minLength": 1},
+    "source_authority": {"type": "string", "minLength": 1},
+    "reference_type": {"type": "string", "enum": ["reference", "import", "consumer-binding"]},
+    "canonical_copy": {"type": "boolean", "const": false},
+    "provenance_reference": {"type": "string", "minLength": 1},
+    "consumer_bindings": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  },
+  "additionalProperties": false
+}
