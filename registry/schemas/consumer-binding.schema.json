@@ -1,1 +1,15 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Consumer Binding Manifest","type":"object","required":["record_id","consumer","source_reference","binding_version","creates_ownership"],"properties":{"record_id":{"type":"string"},"consumer":{"type":"string"},"source_reference":{"type":"string"},"binding_version":{"type":"string"},"creates_ownership":{"const":false}},"additionalProperties":true}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.federationos.example/consumer-binding.schema.json",
+  "title": "Consumer Binding Manifest",
+  "type": "object",
+  "required": ["record_id", "consumer", "source_reference", "binding_version", "creates_ownership"],
+  "properties": {
+    "record_id": {"type": "string", "minLength": 1},
+    "consumer": {"type": "string", "minLength": 1},
+    "source_reference": {"type": "string", "minLength": 1},
+    "binding_version": {"type": "string", "minLength": 1},
+    "creates_ownership": {"type": "boolean", "const": false}
+  },
+  "additionalProperties": false
+}
