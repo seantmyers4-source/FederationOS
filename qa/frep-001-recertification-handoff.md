@@ -4,7 +4,7 @@
 **Request:** FREP-001 Repository Remediation Candidate Re-certification Review  
 **Receiving authority:** OS Federation QA & Certification  
 **Reviewed boundary preserved:** `f0a5b9e5b78dec14e252d59285f2c95788e1d9ea`  
-**Superseding implementation commit:** `18995eca88537e23fc7569eaabbe51e635204387`  
+**Superseding implementation commit:** `042e898211ef6f0e8c897e36a70bca0d82d3fcbb`  
 **Superseding branch:** `engineering/frep-001-qa-corrective-001`
 
 ## Corrective evidence mapping
