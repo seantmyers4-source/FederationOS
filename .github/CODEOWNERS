@@ -1,0 +1,9 @@
+# Provisional bootstrap routing; approval semantics remain with the owning authorities.
+* @seantmyers4-source
+/governance/ @seantmyers4-source
+/architecture/ @seantmyers4-source
+/registry/ @seantmyers4-source
+/engineering/ @seantmyers4-source
+/qa/ @seantmyers4-source
+/pmo/ @seantmyers4-source
+/runtime/ @seantmyers4-source

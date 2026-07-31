@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1",
+  "record_id": "OSF-ENG-EVI-MAN-FREP-001-001",
+  "repository": "seantmyers4-source/FederationOS",
+  "reviewed_candidate_commit": "f0a5b9e5b78dec14e252d59285f2c95788e1d9ea",
+  "superseding_implementation_commit": "042e898211ef6f0e8c897e36a70bca0d82d3fcbb",
+  "candidate_branch": "engineering/frep-001-qa-corrective-001",
+  "evidence": [
+    {
+      "id": "OSF-ENG-CAR-FREP-001-001",
+      "path": "engineering/frep-001-qa-corrective-action-record.md",
+      "type": "corrective-action-and-findings-register"
+    },
+    {
+      "id": "OSF-ENG-VDU-FREP-001-001",
+      "path": "engineering/validator-design-update.md",
+      "type": "design"
+    },
+    {
+      "id": "OSF-ENG-EVI-FREP-001-POS-001",
+      "path": "engineering/evidence/frep-001-positive-test-evidence.md",
+      "type": "positive-test"
+    },
+    {
+      "id": "OSF-ENG-EVI-FREP-001-NEG-001",
+      "path": "engineering/evidence/frep-001-negative-test-evidence.md",
+      "type": "negative-test"
+    },
+    {
+      "id": "OSF-ENG-QARG-FREP-001-001",
+      "path": "qa/frep-001-reproduction-guide.md",
+      "type": "reproduction-guide"
+    },
+    {
+      "id": "OSF-ENG-QAH-FREP-001-001",
+      "path": "qa/frep-001-recertification-handoff.md",
+      "type": "qa-handoff"
+    },
+    {
+      "id": "OSF-ENG-SCM-FREP-001-001",
+      "path": "engineering/evidence/frep-001-superseding-candidate-manifest.json",
+      "type": "candidate-manifest"
+    },
+    {
+      "id": "OSF-ENG-TEST-FREP-001-001",
+      "path": "engineering/tests/test_validator.py",
+      "type": "executable-regression-suite"
+    }
+  ],
+  "original_regression_runs": {
+    "failed": 30591017023,
+    "passed_after_narrow_fix": 30591075868
+  },
+  "classification": "public",
+  "custody_status": "pending-independent-custody-review",
+  "verified_run": {
+    "run_id": 30592968662,
+    "job_id": 91039029410,
+    "technical_head": "042e898211ef6f0e8c897e36a70bca0d82d3fcbb",
+    "conclusion": "success",
+    "positive_validation": "passed",
+    "tests_run": 12,
+    "tests_result": "OK"
+  },
+  "retained_corrective_run": {
+    "run_id": 30592862411,
+    "disposition": "nominal-success-invalidated-by-log-review",
+    "defects": [
+      "validator-self-scan",
+      "pipeline-exit-code-masking"
+    ]
+  }
+}
