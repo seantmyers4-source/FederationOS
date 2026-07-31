@@ -1,7 +1,7 @@
 # FREP-001 Negative Test Evidence
 
 **Evidence ID:** OSF-ENG-EVI-FREP-001-NEG-001  
-**Candidate implementation:** `18995eca88537e23fc7569eaabbe51e635204387`
+**Candidate implementation:** `042e898211ef6f0e8c897e36a70bca0d82d3fcbb`
 
 | Test | Injected defect | Required fail-closed evidence |
 |---|---|---|
@@ -18,3 +18,7 @@
 | Broken documentation link | Add a nonexistent relative Markdown target | `DOCUMENTATION_LINK` |
 
 Each test requires exit code `1` and its specific error category. The suite operates only on temporary copies and leaves the governed candidate unchanged. Final workflow run identity and conclusion are recorded in the QA handoff.
+
+## Verified execution
+
+GitHub Actions run `30592968662`, job `91039029410`, ran all 12 tests in 2.163 seconds and concluded `OK`. Run `30592862411` is retained as regression evidence: it exposed validator self-scan and pipeline exit-code masking, both corrected before this verified run.
