@@ -5,7 +5,7 @@
 **Reviewed candidate:** `a283f7baab445cd076c711ec9511406d6fb32a3e`  
 **Authority:** OS Federation Engineering Implementation Authority  
 **Immutable technical candidate:** `e5e11e8aa429cca4b0638ad1527726e918f224c9`  
-**Status:** Implemented; live workflow verification pending
+**Status:** Complete; returned for bounded QA re-certification
 
 ## Engineering response
 
@@ -31,6 +31,6 @@ Repository settings, platform enforcement, external governance approvals, canoni
 
 ## Engineering decision
 
-**ENGINEERING CORRECTIVE PACKAGE INCOMPLETE — LIVE VERIFICATION PENDING**
+**ENGINEERING CORRECTIVE PACKAGE COMPLETE WITH EXTERNAL DEPENDENCIES**
 
-Implementation is complete, but Engineering will not return the candidate as complete until GitHub has executed the direct-head or PR-head validation and the separate PR merge-result validation successfully.
+Engineering-controlled corrections are complete. GitHub Actions run `30595027111` passed against evidence head `71fe2a1e9b8b4c7da1215c540d9ef474750feec9`: the PR-head job and the independently checked-out PR merge-result job each passed baseline validation and all 24 tests. Repository settings and independent-authority conditions remain open with their competent authorities.

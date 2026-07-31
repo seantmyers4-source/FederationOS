@@ -5,7 +5,7 @@
 **Repository:** `seantmyers4-source/FederationOS`  
 **Candidate branch:** `engineering/frep-001-qa-recert-002`  
 **Immutable technical candidate:** `e5e11e8aa429cca4b0638ad1527726e918f224c9`  
-**Evidence-complete head:** pending final evidence commit  
+**Verified evidence head:** `71fe2a1e9b8b4c7da1215c540d9ef474750feec9`  
 **Draft PR:** #3
 
 ## Requested bounded review
@@ -30,3 +30,13 @@ PR #1 and PR #2 remain draft, open, and unmerged. No prior commit or workflow ev
 ## Requested disposition
 
 Return an independent QA re-certification decision. Do not approve or merge any draft PR solely from this handoff.
+
+## Engineering verification
+
+Workflow run `30595027111` passed:
+
+- PR-head job `91045445397`: candidate validation passed; 24 tests passed.
+- PR merge-result job `91045445445`: merge-result validation passed; 24 tests passed.
+- Direct-head job: correctly skipped for the pull-request event and remains separately available for push and manual-dispatch events.
+
+**Engineering decision:** ENGINEERING CORRECTIVE PACKAGE COMPLETE WITH EXTERNAL DEPENDENCIES.
