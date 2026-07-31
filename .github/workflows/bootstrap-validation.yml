@@ -24,6 +24,6 @@ jobs:
       - name: Install deterministic validator dependency
         run: python -m pip install --disable-pip-version-check -r engineering/requirements-validation.txt
       - name: Positive candidate validation
-        run: python engineering/scripts/validate_bootstrap.py | tee positive-test-evidence.txt
+        run: python engineering/scripts/validate_bootstrap.py
       - name: Positive and negative regression tests
-        run: python -m unittest -v engineering/tests/test_validator.py 2>&1 | tee regression-test-evidence.txt
+        run: python -m unittest -v engineering/tests/test_validator.py
