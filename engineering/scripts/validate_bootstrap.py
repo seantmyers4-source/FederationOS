@@ -141,8 +141,9 @@ def validate(root: pathlib.Path) -> list[str]:
                 if reference != "TBD" and reference not in record_ids:
                     errors.append(f"CROSS_RECORD {path}: unresolved {key} {reference!r}")
 
+    validator_source = pathlib.Path(__file__).resolve()
     for path in sorted(p for p in root.rglob("*") if p.is_file()):
-        if any(part in SKIP_SCAN_PARTS for part in path.parts):
+        if any(part in SKIP_SCAN_PARTS for part in path.parts) or path.resolve() == validator_source:
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         for name, pattern in SECRET_PATTERNS.items():
