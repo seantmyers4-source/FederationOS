@@ -11,7 +11,7 @@
   },
   "superseding_candidate": {
     "branch": "engineering/frep-001-qa-corrective-001",
-    "implementation_commit": "18995eca88537e23fc7569eaabbe51e635204387",
+    "implementation_commit": "042e898211ef6f0e8c897e36a70bca0d82d3fcbb",
     "lifecycle_state": "draft-unmerged",
     "canonical_status": "not-designated",
     "release_status": "not-authorized",
