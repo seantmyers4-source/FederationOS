@@ -4,7 +4,7 @@
 **Consultation:** OSF-QA-CONS-FREP-001-001  
 **Consultation disposition:** QA Certification Granted with Conditions  
 **Reviewed boundary:** `f0a5b9e5b78dec14e252d59285f2c95788e1d9ea`  
-**Superseding implementation candidate:** `18995eca88537e23fc7569eaabbe51e635204387`  
+**Superseding implementation candidate:** `042e898211ef6f0e8c897e36a70bca0d82d3fcbb`  
 **Branch:** `engineering/frep-001-qa-corrective-001`  
 **Repository:** `seantmyers4-source/FederationOS`
 
