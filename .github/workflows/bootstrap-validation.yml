@@ -20,8 +20,9 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: engineering/requirements-validation.txt
       - name: Install deterministic validator dependency
-        run: python -m pip install --disable-pip-version-check jsonschema==4.23.0
+        run: python -m pip install --disable-pip-version-check -r engineering/requirements-validation.txt
       - name: Positive candidate validation
         run: python engineering/scripts/validate_bootstrap.py | tee positive-test-evidence.txt
       - name: Positive and negative regression tests
