@@ -143,7 +143,7 @@ def validate(root: pathlib.Path) -> list[str]:
 
     validator_source = pathlib.Path(__file__).resolve()
     for path in sorted(p for p in root.rglob("*") if p.is_file()):
-        if any(part in SKIP_SCAN_PARTS for part in path.parts) or path.resolve() == validator_source:
+        if any(part in SKIP_SCAN_PARTS for part in path.parts) or path.resolve() == validator_source or rel(path, root) == "engineering/scripts/validate_bootstrap.py":
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         for name, pattern in SECRET_PATTERNS.items():
