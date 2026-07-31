@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.1",
+  "record_id": "FREP-SBM-001",
+  "authority": "OS Federation Engineering Implementation Authority",
+  "status": "candidate-pending-registry-verification",
+  "bindings": [
+    {"path": "governance/repository-identity.json", "schema": "registry/schemas/repository-identity.schema.json", "role": "record", "required": true},
+    {"path": "registry/schema-binding-manifest.json", "schema": "registry/schemas/schema-binding-manifest.schema.json", "role": "record", "required": true},
+    {"path": "templates/cross-os-reference.json", "schema": "registry/schemas/cross-os-reference.schema.json", "role": "template", "required": true},
+    {"glob": "**/*.provenance.json", "schema": "registry/schemas/provenance.schema.json", "role": "record"},
+    {"glob": "**/*.source-authority.json", "schema": "registry/schemas/source-authority.schema.json", "role": "record"},
+    {"glob": "**/*.cross-os-reference.json", "schema": "registry/schemas/cross-os-reference.schema.json", "role": "record"},
+    {"glob": "**/*.consumer-binding.json", "schema": "registry/schemas/consumer-binding.schema.json", "role": "record"}
+  ]
+}

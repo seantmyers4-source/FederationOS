@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "record_id": "OSF-ENG-CPM-FREP-001-002",
+  "repository": "seantmyers4-source/FederationOS",
+  "base_candidate": "a283f7baab445cd076c711ec9511406d6fb32a3e",
+  "candidate_branch": "engineering/frep-001-qa-recert-002",
+  "candidate_head": "e5e11e8aa429cca4b0638ad1527726e918f224c9",
+  "retrieval": {
+    "git": [
+      "git clone https://github.com/seantmyers4-source/FederationOS.git",
+      "git checkout e5e11e8aa429cca4b0638ad1527726e918f224c9"
+    ],
+    "read_only_archive": "https://github.com/seantmyers4-source/FederationOS/archive/e5e11e8aa429cca4b0638ad1527726e918f224c9.tar.gz"
+  },
+  "integrity_rule": "QA must compare the resolved checkout HEAD to candidate_head before execution.",
+  "verified_execution": {
+    "evidence_head": "71fe2a1e9b8b4c7da1215c540d9ef474750feec9",
+    "workflow_run": 30595027111,
+    "pull_request_head_job": 91045445397,
+    "pull_request_merge_result_job": 91045445445,
+    "tests_per_applicable_job": 24,
+    "result": "success"
+  },
+  "prior_evidence_preservation": {
+    "pull_requests": [1, 2],
+    "runs": [30591017023, 30591075868, 30592862411, 30592968662, 30593036820],
+    "mutation": "none"
+  },
+  "classification": "public",
+  "custody_status": "pending Records & Evidence Custody review"
+}

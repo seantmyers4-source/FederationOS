@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.federationos.example/repository-identity.schema.json",
+  "title": "Repository Identity Manifest",
+  "type": "object",
+  "required": ["schema_version", "record_id", "repository_id", "repository", "owner", "visibility", "default_branch", "canonical_status", "directive", "verification"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1"},
+    "record_id": {"type": "string", "const": "FREP-001"},
+    "repository_id": {"type": "integer", "const": 1317741101},
+    "repository": {"type": "string", "const": "seantmyers4-source/FederationOS"},
+    "owner": {"type": "string", "const": "seantmyers4-source"},
+    "visibility": {"type": "string", "const": "public"},
+    "default_branch": {"type": "string", "const": "main"},
+    "canonical_status": {"type": "string", "const": "candidate-not-designated"},
+    "directive": {"type": "string", "const": "FED-CC-RMD-FREP-001-001"},
+    "verification": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

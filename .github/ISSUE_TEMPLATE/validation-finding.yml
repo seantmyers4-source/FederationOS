@@ -1,0 +1,19 @@
+name: Validation finding
+description: Record a public-safe validation finding
+title: "[FINDING] "
+body:
+  - type: input
+    id: record
+    attributes: {label: Finding identifier}
+    validations: {required: true}
+  - type: dropdown
+    id: severity
+    attributes: {label: Severity, options: [Critical, High, Medium, Low]}
+    validations: {required: true}
+  - type: textarea
+    id: observation
+    attributes: {label: Public-safe observation}
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes: {label: Evidence reference (do not paste restricted evidence)}

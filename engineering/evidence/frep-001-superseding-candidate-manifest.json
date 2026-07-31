@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "record_id": "OSF-ENG-SCM-FREP-001-001",
+  "candidate": "FREP-001 — FederationOS Repository Remediation Candidate",
+  "repository": "seantmyers4-source/FederationOS",
+  "reviewed_boundary": {
+    "pull_request": 1,
+    "branch": "engineering/fed-cc-rmd-frep-001-001",
+    "commit": "f0a5b9e5b78dec14e252d59285f2c95788e1d9ea",
+    "mutation": "none"
+  },
+  "superseding_candidate": {
+    "branch": "engineering/frep-001-qa-corrective-001",
+    "implementation_commit": "042e898211ef6f0e8c897e36a70bca0d82d3fcbb",
+    "lifecycle_state": "draft-unmerged",
+    "canonical_status": "not-designated",
+    "release_status": "not-authorized",
+    "runtime_status": "not-active"
+  },
+  "validation_entry_point": "engineering/scripts/validate_bootstrap.py",
+  "regression_entry_point": "engineering/tests/test_validator.py",
+  "required_external_concurrences": [
+    "Repository & Platform Authority",
+    "Security Governance",
+    "Registry & Metadata",
+    "Records & Evidence Custody",
+    "PMO & Release Governance",
+    "Runtime Operations",
+    "QA & Certification"
+  ]
+}

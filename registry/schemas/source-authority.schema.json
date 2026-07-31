@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.federationos.example/source-authority.schema.json",
+  "type": "object",
+  "required": ["schema_version", "record_id", "authority_name", "operating_system", "status"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "record_id": {"type": "string", "minLength": 1},
+    "authority_name": {"type": "string", "minLength": 1},
+    "operating_system": {"type": "string", "minLength": 1},
+    "status": {"enum": ["verified", "unresolved", "withdrawn"]},
+    "supersedes": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+  },
+  "additionalProperties": false
+}

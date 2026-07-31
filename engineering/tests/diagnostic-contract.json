@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "record_id": "OSF-ENG-DIAG-FREP-001-001",
+  "negative_exit_code": 1,
+  "cases": [
+    {"test": "missing_required_file", "diagnostic": "REQUIRED_FILE", "exit_code": 1},
+    {"test": "missing_required_directory", "diagnostic": "REQUIRED_DIRECTORY", "exit_code": 1},
+    {"test": "malformed_json", "diagnostic": "JSON_PARSE", "exit_code": 1},
+    {"test": "missing_required_field", "diagnostic": "SCHEMA_CONFORMANCE", "exit_code": 1},
+    {"test": "invalid_type", "diagnostic": "SCHEMA_CONFORMANCE", "exit_code": 1},
+    {"test": "invalid_enumeration", "diagnostic": "SCHEMA_CONFORMANCE", "exit_code": 1},
+    {"test": "invalid_constant", "diagnostic": "SCHEMA_CONFORMANCE", "exit_code": 1},
+    {"test": "invalid_source_authority_type", "diagnostic": "SCHEMA_CONFORMANCE", "exit_code": 1},
+    {"test": "missing_source_authority", "diagnostic": "SOURCE_AUTHORITY_MISSING", "exit_code": 1},
+    {"test": "unresolved_source_authority", "diagnostic": "SOURCE_AUTHORITY_UNRESOLVED", "exit_code": 1},
+    {"test": "duplicate_identifier", "diagnostic": "DUPLICATE_RECORD_ID", "exit_code": 1},
+    {"test": "broken_cross_record_reference", "diagnostic": "CROSS_RECORD_BROKEN", "exit_code": 1},
+    {"test": "invalid_supersession", "diagnostic": "SUPERSESSION_INVALID", "exit_code": 1},
+    {"test": "empty_required_value", "diagnostic": "SCHEMA_CONFORMANCE", "exit_code": 1},
+    {"test": "unexpected_property_behavior", "diagnostic": "SCHEMA_CONFORMANCE", "exit_code": 1},
+    {"test": "incorrect_schema_version", "diagnostic": "SCHEMA_CONFORMANCE", "exit_code": 1},
+    {"test": "nested_or_alternate_path_record", "diagnostic": "CONSUMER_BINDING_INVALID", "exit_code": 1},
+    {"test": "invalid_consumer_binding", "diagnostic": "CONSUMER_BINDING_INVALID", "exit_code": 1},
+    {"test": "prohibited_canonical_copy", "diagnostic": "PROHIBITED_CANONICAL_COPY", "exit_code": 1},
+    {"test": "representative_secret_pattern", "diagnostic": "SECRET_PATTERN", "exit_code": 1},
+    {"test": "representative_prohibited_content", "diagnostic": "PROHIBITED_CONTENT", "exit_code": 1},
+    {"test": "broken_documentation_link", "diagnostic": "DOCUMENTATION_LINK", "exit_code": 1}
+  ]
+}
