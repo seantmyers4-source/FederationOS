@@ -4,8 +4,9 @@
 **Prior QA return:** OSF-QA-RETURN-FREP-001-001  
 **Repository:** `seantmyers4-source/FederationOS`  
 **Candidate branch:** `engineering/frep-001-qa-recert-002`  
-**Candidate head:** `PENDING_FINAL_HEAD`  
-**Draft PR:** pending creation
+**Immutable technical candidate:** `e5e11e8aa429cca4b0638ad1527726e918f224c9`  
+**Evidence-complete head:** pending final evidence commit  
+**Draft PR:** #3
 
 ## Requested bounded review
 

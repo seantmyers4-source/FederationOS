@@ -4,13 +4,13 @@
   "repository": "seantmyers4-source/FederationOS",
   "base_candidate": "a283f7baab445cd076c711ec9511406d6fb32a3e",
   "candidate_branch": "engineering/frep-001-qa-recert-002",
-  "candidate_head": "PENDING_FINAL_HEAD",
+  "candidate_head": "e5e11e8aa429cca4b0638ad1527726e918f224c9",
   "retrieval": {
     "git": [
       "git clone https://github.com/seantmyers4-source/FederationOS.git",
-      "git checkout PENDING_FINAL_HEAD"
+      "git checkout e5e11e8aa429cca4b0638ad1527726e918f224c9"
     ],
-    "read_only_archive": "https://github.com/seantmyers4-source/FederationOS/archive/PENDING_FINAL_HEAD.tar.gz"
+    "read_only_archive": "https://github.com/seantmyers4-source/FederationOS/archive/e5e11e8aa429cca4b0638ad1527726e918f224c9.tar.gz"
   },
   "integrity_rule": "QA must compare the resolved checkout HEAD to candidate_head before execution.",
   "prior_evidence_preservation": {

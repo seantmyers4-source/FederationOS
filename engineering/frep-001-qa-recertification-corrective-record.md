@@ -4,7 +4,8 @@
 **QA return:** OSF-QA-RETURN-FREP-001-001  
 **Reviewed candidate:** `a283f7baab445cd076c711ec9511406d6fb32a3e`  
 **Authority:** OS Federation Engineering Implementation Authority  
-**Status:** Candidate pending live verification
+**Immutable technical candidate:** `e5e11e8aa429cca4b0638ad1527726e918f224c9`  
+**Status:** Implemented; live workflow verification pending
 
 ## Engineering response
 
@@ -30,4 +31,6 @@ Repository settings, platform enforcement, external governance approvals, canoni
 
 ## Engineering decision
 
-The final decision remains pending successful GitHub execution against the new immutable candidate head.
+**ENGINEERING CORRECTIVE PACKAGE INCOMPLETE — LIVE VERIFICATION PENDING**
+
+Implementation is complete, but Engineering will not return the candidate as complete until GitHub has executed the direct-head or PR-head validation and the separate PR merge-result validation successfully.
