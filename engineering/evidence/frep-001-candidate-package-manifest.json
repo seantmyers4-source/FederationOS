@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "record_id": "OSF-ENG-CPM-FREP-001-002",
+  "repository": "seantmyers4-source/FederationOS",
+  "base_candidate": "a283f7baab445cd076c711ec9511406d6fb32a3e",
+  "candidate_branch": "engineering/frep-001-qa-recert-002",
+  "candidate_head": "PENDING_FINAL_HEAD",
+  "retrieval": {
+    "git": [
+      "git clone https://github.com/seantmyers4-source/FederationOS.git",
+      "git checkout PENDING_FINAL_HEAD"
+    ],
+    "read_only_archive": "https://github.com/seantmyers4-source/FederationOS/archive/PENDING_FINAL_HEAD.tar.gz"
+  },
+  "integrity_rule": "QA must compare the resolved checkout HEAD to candidate_head before execution.",
+  "prior_evidence_preservation": {
+    "pull_requests": [1, 2],
+    "runs": [30591017023, 30591075868, 30592862411, 30592968662, 30593036820],
+    "mutation": "none"
+  },
+  "classification": "public",
+  "custody_status": "pending Records & Evidence Custody review"
+}

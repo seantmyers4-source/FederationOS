@@ -9,21 +9,69 @@ on:
 permissions:
   contents: read
 
+env:
+  PYTHON_VERSION: "3.12"
+
 jobs:
-  validate:
+  direct-head:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - name: Check out candidate head
+      - name: Check out direct candidate head
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - name: Configure Python 3.12
+        with:
+          ref: ${{ github.sha }}
+      - name: Configure Python
         uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
         with:
-          python-version: "3.12"
+          python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
           cache-dependency-path: engineering/requirements-validation.txt
       - name: Install deterministic validator dependency
         run: python -m pip install --disable-pip-version-check -r engineering/requirements-validation.txt
-      - name: Positive candidate validation
+      - name: Validate direct head
         run: python engineering/scripts/validate_bootstrap.py
-      - name: Positive and negative regression tests
+      - name: Execute diagnostic contract
+        run: python -m unittest -v engineering/tests/test_validator.py
+
+  pull-request-head:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out immutable pull-request head
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Configure Python
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: engineering/requirements-validation.txt
+      - name: Install deterministic validator dependency
+        run: python -m pip install --disable-pip-version-check -r engineering/requirements-validation.txt
+      - name: Validate pull-request head
+        run: python engineering/scripts/validate_bootstrap.py
+      - name: Execute diagnostic contract
+        run: python -m unittest -v engineering/tests/test_validator.py
+
+  pull-request-merge-result:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out GitHub merge result
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+      - name: Configure Python
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: engineering/requirements-validation.txt
+      - name: Install deterministic validator dependency
+        run: python -m pip install --disable-pip-version-check -r engineering/requirements-validation.txt
+      - name: Validate PR merge result
+        run: python engineering/scripts/validate_bootstrap.py
+      - name: Execute diagnostic contract
         run: python -m unittest -v engineering/tests/test_validator.py
